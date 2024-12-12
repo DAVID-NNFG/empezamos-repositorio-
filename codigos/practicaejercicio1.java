@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import util.Empleado;
+import util.Empleado; 
 
 public class practicaejercicio1 {
 
@@ -7,23 +7,15 @@ public class practicaejercicio1 {
         generarInformeEmpleado();
     }
 
-    public static void generarInformeEmpleado() {
-        Scanner sc = new Scanner(System.in);
-        Empleado empleadoController = new Empleado();
+    public static void generarInformeEmpleado() { 
+        Scanner sc = new Scanner(System.in); 
+        Empleado empleadoController = new Empleado(); 
 
-        System.out.println("Informe de pago a empleados ");
-
-        while (true) {
-            System.out.print("Ingrese el valor del automóvil vendido : ");
-            double valorAuto = sc.nextDouble();
-
-            if (valorAuto == 1) {
-                break;
-            }
-            empleadoController.registrarVenta(valorAuto);
-        }
-
-
+        System.out.print("Ingrese el valor del automóvil vendido: ");
+        double valorAuto = sc.nextDouble();
+        empleadoController.registrarVenta(valorAuto); 
+        
+        // aqui imprime el informe 
         System.out.println("Total de autos vendidos: " + empleadoController.getTotalAutosVendidos());
         System.out.println("Valor total de ventas: $" + empleadoController.getValorTotalVentas());
         System.out.println("Sueldo base: $" + empleadoController.getSueldoBase());
